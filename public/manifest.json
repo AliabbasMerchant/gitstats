@@ -1,6 +1,6 @@
 {
   "short_name": "GitStats",
-  "name": "GitStats - An OpenSource Contribution Analyzer",
+  "name": "GitStats - An Open-source Github Contribution Analyzer",
   "icons": [
     {
       "src": "favicon.png",
