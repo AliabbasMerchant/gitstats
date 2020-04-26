@@ -31,3 +31,6 @@ yarn.lock
 package.lock.json
 
 /graphql
+
+local.deploy.sh
+key.pem
