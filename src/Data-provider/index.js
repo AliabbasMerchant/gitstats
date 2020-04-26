@@ -99,7 +99,7 @@ async function profileAnalysis(repoInfo) {
 
   // repoNodes = list of repository objects
   let repoNodes = repoInfo.data.user.repositories.nodes;
-  let totalCommit = 0
+  // let totalCommit = 0/
   let totalStar = 0
   let totalFork = 0
 
@@ -118,7 +118,7 @@ async function profileAnalysis(repoInfo) {
 
   repoNodes.forEach(repo => {
     // perform basic calculation here
-    totalCommit += repo.contributions ? repo.contributions.target.userCommits.totalCount : 0;
+    // totalCommit += repo.contributions ? repo.contributions.target.userCommits.totalCount : 0;
     totalStar += repo.stargazers ? repo.stargazers.totalCount : 0;
     totalFork += repo.forks ? repo.forks.totalCount : 0;
 

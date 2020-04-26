@@ -1,5 +1,3 @@
-sudo:
-  false
 language: node_js
 node_js:
         - 10
@@ -7,16 +5,17 @@ branches:
   only:
     - dev2
 
-# cache:
-#     directories:
-#         - "node_modules"
+cache:
+    directories:
+        - "node_modules"
 
-install:
-  - npm install
+# install:
+  # - npm install
+  # - npm install create-react-app
 
 # before_script:
 #   - openssl aes-256-cbc -a -d -in key.pem.enc -out key.pem -k $ENC_KEY
 
 script:
-  # - bash ./deploy.sh
-  - npm run build
+  # - npm run build
+  - bash ./deploy.sh

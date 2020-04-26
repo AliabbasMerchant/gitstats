@@ -11,13 +11,13 @@ function Header() {
     let body = document.querySelector("body");
 
     //Initial load theme set
-    if(localStorage.getItem('theme') == 'light'){
+    if(localStorage.getItem('theme') === 'light'){
         body.classList.remove('night-mode');
         imageUrl = "img/moon.png"
     }
 
     function changeTheme() {    
-        if (localStorage.getItem('theme') == 'light') {
+        if (localStorage.getItem('theme') === 'light') {
             localStorage.setItem('theme', 'dark');
             body.classList.add('night-mode');
             setImageUrl("/img/sun.png");
@@ -71,7 +71,7 @@ function Header() {
                         <button onClick={openSearch} className="search_icon">{Loader.search_icon}</button>
                         <ul className="navbar-nav ml-auto">
                             <li className="nav-item active active nav-item position-relative search-wrapper">
-                                <a className="nav-link text-light-gray">
+                                <Link className="nav-link text-light-gray">
                                     <DebounceInput
                                         minLength={2}
                                         debounceTimeout={500}
@@ -81,7 +81,7 @@ function Header() {
                                         onBlur={() => closeSearch()}
                                         id="search_bar"
                                     />
-                                </a>
+                                </Link>
                                 {searchUsers && (
                                     <div className="Search-result">
                                         <ul className="search-result">
@@ -102,7 +102,7 @@ function Header() {
                                             src={process.env.PUBLIC_URL + imageUrl}
                                             alt=""
                                         />
-                                        <span className="d-none d-lg-inline-block d-sm-inline-block">{localStorage.getItem('theme') == 'light' ? "Night Mode" : "Day Mode"}</span>
+                                        <span className="d-none d-lg-inline-block d-sm-inline-block">{localStorage.getItem('theme') === 'light' ? "Night Mode" : "Day Mode"}</span>
                                     </button>
                                 </div>
                             </li>
